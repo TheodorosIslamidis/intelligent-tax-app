@@ -1,0 +1,19 @@
+.advice-display h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .advice-display h2 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .advice-display p,
+  .advice-display li {
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  
