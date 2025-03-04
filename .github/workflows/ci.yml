@@ -15,47 +15,35 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js for the frontend
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
-      # Step 3: Install dependencies and build the Vite-based React frontend
       - name: Build Frontend
         working-directory: ./frontend
         run: |
           npm install
           npm run build
 
-      # Step 4: Build the backend Docker image
       - name: Build Backend Docker Image
         run: docker build -t intelligent-tax-app-backend ./backend
 
-      # Step 5: Build the frontend Docker image
       - name: Build Frontend Docker Image
         run: docker build -t intelligent-tax-app-frontend ./frontend
 
-      # (Optional) Step 6: Run tests if available
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install pytest
+        run: pip install pytest
+
       - name: Run Tests
         run: |
           cd ./backend && pytest
           cd ../frontend && npm test
-
-
-      # (Optional) Step 7: Push images to a container registry
-      # - name: Login to Docker Hub
-      #   uses: docker/login-action@v2
-      #   with:
-      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     password: ${{ secrets.DOCKERHUB_PASSWORD }}
-      #
-      # - name: Push Backend Image
-      #   run: docker push intelligent-tax-app-backend
-      #
-      # - name: Push Frontend Image
-      #   run: docker push intelligent-tax-app-frontend
