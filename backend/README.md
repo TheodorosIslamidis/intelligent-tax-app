@@ -12,7 +12,7 @@ A Flask-based API that provides comprehensive tax advice in Greek using OpenAI's
 
 ## Prerequisites
 
-- **Python 3.7+**
+- **Python 3.11**
 - **Flask**
 - **Flask-CORS**
 - **OpenAI Python Client**
