@@ -44,5 +44,5 @@ jobs:
         run: pip install pytest
 
       - name: Run Tests
-        run: |
-          cd ./backend && pytest
+        working-directory: backend
+        run: python -m pytest
