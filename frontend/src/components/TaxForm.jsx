@@ -3,7 +3,7 @@ import './TaxForm.css';
 import ReactMarkdown from 'react-markdown';
 
 function TaxForm() {
-  // Form fields
+  
   const [salaryIncome, setSalaryIncome] = useState(0);
   const [freelanceIncome, setFreelanceIncome] = useState(0);
   const [propertyIncome, setPropertyIncome] = useState(0);
@@ -12,24 +12,24 @@ function TaxForm() {
   const [loans, setLoans] = useState(0);
   const [businessExpenses, setBusinessExpenses] = useState(0);
 
-  // States for API response and typewriter effect
+  
   const [advice, setAdvice] = useState('');
   const [displayedAdvice, setDisplayedAdvice] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // Update property info value for a specific index
+  
   const handlePropertyChange = (index, value) => {
     const updatedProperties = [...propertyInfos];
     updatedProperties[index] = Number(value);
     setPropertyInfos(updatedProperties);
   };
 
-  // Add a new property info input
+  
   const handleAddProperty = () => {
     setPropertyInfos([...propertyInfos, 0]);
   };
 
-  // Submit the form and fetch tax advice
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -64,7 +64,7 @@ function TaxForm() {
 
   
 
-  // Typewriter effect to stream the advice text faster (20ms per character)
+  
   useEffect(() => {
   if (!loading && advice) {
     let currentIndex = 0;
