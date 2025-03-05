@@ -1,44 +1,61 @@
+/* Global resets */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+/* Main container to center everything */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Description section styling */
 .app-description {
-  width: 600px;
-  max-width: 90%;
   text-align: center;
+  max-width: 800px;
   margin-bottom: 20px;
 }
 
-
-.app-container {
+/* Container for the form and advice */
+.form-and-advice-container {
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
+  gap: 20px;
   justify-content: center;
-  background-color: #ffffff;
-  padding: 20px;
-  font-family: sans-serif;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
 }
 
-
-
-.tax-form-container {
-  width: 600px;      
-  max-width: 90%;    
+/* Tax form styling */
+.tax-form {
+  width: 600px;
+  max-width: 90%;
   background: #f9f9f9;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
-.tax-form-container h1 {
-  text-align: center;
-  margin-bottom: 20px;
+/* Streaming advice styling */
+.streaming-advice {
+  width: 600px;
+  max-width: 90%;
+  background: #e9ffe9;
+  border: 1px solid #c8e6c9;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-y: auto;
+  min-height: 200px;
 }
 
-
-.tax-form {
-  display: flex;
-  flex-direction: column;
-}
-
+/* Form labels and inputs */
 .tax-form label {
   margin-bottom: 15px;
   font-weight: bold;
@@ -53,6 +70,7 @@
   border-radius: 4px;
 }
 
+/* Property section styling */
 .property-section {
   margin-bottom: 15px;
 }
@@ -61,7 +79,7 @@
   margin-bottom: 10px;
 }
 
-
+/* Button styling */
 .tax-form button {
   margin-top: 20px;
   padding: 10px;
@@ -77,17 +95,8 @@
   cursor: not-allowed;
 }
 
-
-.advice {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e9ffe9;
-  border: 1px solid #c8e6c9;
-  border-radius: 4px;
-}
-
-.advice h2 {
+/* Center advice heading if present */
+.streaming-advice h2 {
   text-align: center;
   margin-top: 0;
 }
-
