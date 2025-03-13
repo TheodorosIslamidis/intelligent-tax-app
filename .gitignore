@@ -26,9 +26,6 @@ db.sqlite3
 build/
 dist/
 
-# Ignore Docker-related files
-*.dockerfile
-docker-compose.yml
 
 # Ignore compiled dependencies
 deps/
