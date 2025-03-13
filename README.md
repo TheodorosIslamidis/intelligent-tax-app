@@ -24,6 +24,5 @@ This project is a full-stack web application that provides intelligent tax filin
 ### CI/CD
 This project uses GitHub Actions for continuous integration. See `.github/workflows/ci.yml` for details.
 
-## Presentation
-A short presentation explaining the project, challenges faced, and solutions implemented is available [here](#).
+
 
